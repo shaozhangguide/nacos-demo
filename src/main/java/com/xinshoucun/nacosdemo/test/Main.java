@@ -17,7 +17,7 @@ public class Main {
     public static void main(String[] args){
 
 //        scheduleWithFixedDelayTaskTest();
-  //      scheduleTaskAtFixedRateTest();
+       // scheduleTaskAtFixedRateTest();
         getConfigs();
 //        new NacosThreadTest();
         while (true) {
@@ -42,7 +42,7 @@ public class Main {
             @Override
             public void run() {
                 try {
-                    long c = 1605082917000L;
+                    long c = 1607151557000L;
                     if(System.currentTimeMillis() <= c){
                         Thread.sleep(1000L);//2000
                     }else {
@@ -71,7 +71,7 @@ public class Main {
          */
         respScheduler.scheduleWithFixedDelay(() -> {
             try {
-                long c = 1604996517000L;
+                long c = 1607324357000L;
                 if(System.currentTimeMillis() <= c){
                     Thread.sleep(1000L);//2000
                 }else {
@@ -94,13 +94,13 @@ public class Main {
 
     public static void getConfigs(){
         try {
-            String serverAddr = "39.100.39.41:8848";
+            String serverAddr = "localhost:8848";
             String dataId = "application.properties";
             String group = "DEFAULT_GROUP";
             //1.配置nacos 属性
             Properties properties = new Properties();
             properties.put("serverAddr", serverAddr);
-            properties.put("namespace", "73c2c97a-d8d1-44bb-a98a-ee5e5fd3cbb6");
+            properties.put("namespace", "5085811c-0400-416b-8870-90cbd63903a4");
             //2.创建ConfigService对象
             ConfigService configService = NacosFactory.createConfigService(properties);
             //3.获取配置文件（只不过这里的只会获取一次，不适合当配置文件修改时，获取内容。）
